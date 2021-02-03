@@ -1,15 +1,15 @@
-function Home(){
-    return  <div>Home</div>
+function Home() {
+    return <div>Home</div>
 }
 
-function Tempo(props){
+/*function Tempo(props){
     return (
         <div>
             <div></div>
             <div>{props.staticDateString}</div>
         </div>
     )
-}
+}*/
 
 export async function getStaticProps() {
     const staticDate = new Date();
@@ -23,4 +23,4 @@ export async function getStaticProps() {
     }
 }
 
-export default Home
+export default Home;
