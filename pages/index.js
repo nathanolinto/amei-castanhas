@@ -6,12 +6,12 @@ import Grid from '../components/layout/grid'
 function Index(props){
     const itens = props.data
     return(
-        <>
+        <div className="container">
             <Header />
             <Heading />
             <Grid itens={itens} />
             <script type="text/javascript" src="/initLayout.js"></script>
-        </>
+        </div>
     )
 }
 
