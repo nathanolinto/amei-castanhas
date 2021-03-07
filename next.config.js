@@ -5,6 +5,8 @@ module.exports = {
         URL_PANEL: "http://localhost:3000/panel"
     },
     images: {
-        domains: ["i.pinimg.com", "scontent.cdninstagram.com"],
+        domains: ["scontent.cdninstagram.com"],
     }
 };
+
+//domains: ["scontent.cdninstagram.com","i.pinimg.com"],

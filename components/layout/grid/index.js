@@ -31,7 +31,7 @@ function Index({itens}){
         }
         if(item.media_type == 'VIDEO'){
             return(
-                <video height="100%" autoplay muted loop playsinline>
+                <video height="100%" autoPlay muted loop>
                     <source
                     src={item.media_url}
                     type="video/mp4" />
@@ -45,9 +45,9 @@ function Index({itens}){
         <div className="grid-container">
             <div className="grid">
                     {arryaItensSeparados.map((column)=>(
-                        <div className="column">
+                        <div key={column[0].id} className="column">
                             {column.map((item)=>(
-                                <div className="item">
+                                <div key={item.id} className="item">
                                     {gerarMedia(item)}
                                 </div>
                             ))}
