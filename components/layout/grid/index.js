@@ -21,11 +21,12 @@ function Index({itens}){
     const gerarMedia = function(item){
         if(item.media_type == 'IMAGE'){
             return(
-                <Image
+                <img
                     src={item.media_url}
                     alt={item.caption}
                     width={160}
                     height={200}
+                    
                 />
             )
         }
