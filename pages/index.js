@@ -1,47 +1,28 @@
-import ImgsMotivacionais from '../public/imgsMotivacionais.json'
+import axios  from 'axios'
+import Header from '../components/layout/header'
+import Heading from '../components/layout/heading'
+import Grid from '../components/layout/grid'
 
-import { ImgMotivacional } from '../components/imgMotiovacional/index'
-import { Header } from '../components/header/index'
-
-import Container from '@material-ui/core/Container'
-import { makeStyles } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
-import Grid from '@material-ui/core/Grid';
-
-const useStyles = makeStyles((theme) => ({
-    root: {
-        flexGrow: 1,
-    },
-    paper: {
-        padding: theme.spacing(2),
-        margin: 'auto',
-        textAlign: 'center',
-        color: theme.palette.text.secondary,
-    }
-}));
-
-function Home(props) {
-    const classes = useStyles();
-    return (
-        <Container>
-            <Grid container style={{ height: '100vh' }} justify="center" alignItems="center" spacing={2} >
-                <Grid item>
-                    <Paper className={classes.paper} elevation={3}><ImgMotivacional>{props.staticImgsMotivacionais}</ImgMotivacional></Paper>
-                </Grid>
-            </Grid>
-        </Container>
+function Index(props){
+    const itens = props.data
+    return(
+        <>
+            <Header />
+            <Heading />
+            <Grid itens={itens} />
+            <script type="text/javascript" src="/initLayout.js"></script>
+        </>
     )
 }
 
 export async function getStaticProps() {
-    //imagem aleatoria motivacional
-    const staticImgsMotivacionais = ImgsMotivacionais[Math.floor(Math.random() * ImgsMotivacionais.length)]['src']
-    return {
-        props: {
-            staticImgsMotivacionais
-        },
-        revalidate: 3
-    }
+    const accessToken = "IGQVJWVnFQdkdVZADVxeXBNLXBrRG5jaXFfTnYtWUt6MXk3akxhc2FMT1doazEzc004UmFwOFZARY1NQZAHZA0V2dNcUFJdFNRUzViQ21VMzlwajBFS3FXUVhNRlAxdHJuMnNUSUxCOWlkWGRwVF9lVUFBbAZDZD"
+    const urlInsta = `https://graph.instagram.com/me/media?fields=caption,media_url,media_type,permalink,timestamp,username&access_token=${accessToken}`
+    //https://graph.instagram.com/me/media?fields=caption,media_url,media_type,permalink,timestamp,username&access_token=IGQVJWVnFQdkdVZADVxeXBNLXBrRG5jaXFfTnYtWUt6MXk3akxhc2FMT1doazEzc004UmFwOFZARY1NQZAHZA0V2dNcUFJdFNRUzViQ21VMzlwajBFS3FXUVhNRlAxdHJuMnNUSUxCOWlkWGRwVF9lVUFBbAZDZD
+
+    const res = await axios.get(urlInsta);
+    const { data } = await res;
+    return { props: data }
 }
 
-export default Home;
+export default Index;
