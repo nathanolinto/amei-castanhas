@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import Header from '../components/layout/header'
 import Conteudo from '../components/layout/conteudo'
 
@@ -5,6 +6,10 @@ function Index(){
     //const itens = props.data
     return(
         <>
+            <Head>
+                <title>Amei! Castanhas</title>
+                <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+            </Head>
             <Header />
             <div className="container">
                 <Conteudo />
