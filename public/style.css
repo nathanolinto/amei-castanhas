@@ -232,28 +232,28 @@ body {
 }
 
 .container .section:nth-child(1) {
-  background: #F2D98D;
+  background: #F2D98D url("../2-2.jpeg");
   background-position-x: center;
   background-size: cover;
   background-attachment: fixed;
 }
 
 .container .section:nth-child(2) {
-  background: #F2D98D;
+  background: #F2D98D url("../3-2.jpeg");
   background-position-x: center;
   background-size: cover;
   background-attachment: fixed;
 }
 
 .container .section:nth-child(3) {
-  background: #F2E9E9;
+  background: #F2E9E9 url("../1-2.jpeg");
   background-position-x: center;
   background-size: cover;
   background-attachment: fixed;
 }
 
 .container .section:nth-child(4) {
-  background: #F2D98D;
+  background: #F2D98D url("../2-2.jpeg");
   background-position-x: center;
   background-size: cover;
   background-attachment: fixed;
