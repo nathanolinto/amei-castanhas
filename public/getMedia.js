@@ -55,7 +55,7 @@ const getMedia = {
             }
         } while (temUrl != undefined)*/
 
-        console.log('Fui no Servidor!')
+        //console.log('Fui no Servidor!')
 
         //arrays portipo
         const imgs = []
