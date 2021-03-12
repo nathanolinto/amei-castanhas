@@ -1,0 +1,276 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+body {
+  position: relative;
+}
+
+*, li {
+  list-style: none;
+}
+
+.header-container {
+  position: fixed;
+  top: 0;
+  z-index: 5200;
+  width: 100%;
+  background-color: #fff;
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.header-container header {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5px 10px;
+}
+
+.header-container header h3 {
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #D9628D;
+}
+
+.header-container header h3 a {
+  color: #D9628D;
+  text-decoration: none;
+}
+
+.header-container header h3 a:hover {
+  text-decoration: underline;
+}
+
+.header-container header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header-container header nav ul li {
+  padding: 10px;
+}
+
+.header-container header nav ul li a {
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 200;
+  color: #D9628D;
+}
+
+.header-container header nav ul li a:hover {
+  text-decoration: underline;
+}
+
+.header-container header nav ul li img {
+  margin-top: 2px;
+}
+
+@media (min-width: 600px) {
+  header {
+    width: 600px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.container .section {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-blend-mode: multiply;
+}
+
+.container .section .init {
+  position: relative;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  background: #F2E9E9;
+}
+
+.container .section .init .cloud {
+  position: absolute;
+  width: 100%;
+  max-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .section .init .cloud h2 {
+  background: #D9628D;
+  color: #fff;
+  text-align: center;
+  font-size: 15vw;
+  line-height: 1em;
+  z-index: 1000;
+  font-weight: 900;
+  padding: 25px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.container .section .init .cloud h2 span {
+  font-size: 0.35em;
+  letter-spacing: 0.4em;
+  font-weight: 400;
+  display: block;
+}
+
+.container .section .init .cloud .block {
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  opacity: 0.75;
+}
+
+.container .section .init .cloud .block img {
+  height: 100%;
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.container .section .content {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 10px;
+  right: 10px;
+  max-width: 700px;
+}
+
+.container .section .content h2, .container .section .content p {
+  background: #fff;
+  color: #111;
+  font-weight: 600;
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 2em;
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.container .section .content p {
+  display: block;
+  font-weight: 400;
+  margin-bottom: 20px;
+  font-size: 1em;
+}
+
+.container .section .content p:last-of-type {
+  margin-bottom: 0px;
+}
+
+.container .section .content p a, .container .section .content p span {
+  color: #F62B86;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.container .section .content p a:hover, .container .section .content p span:hover {
+  text-decoration: underline;
+}
+
+.container .section .content p span:hover {
+  text-decoration: none;
+}
+
+.container .section .quemsomos p {
+  margin: 0 !important;
+}
+
+.container .section:nth-child(1) {
+  background: #F2D98D;
+  background-position-x: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.container .section:nth-child(2) {
+  background: #F2D98D;
+  background-position-x: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.container .section:nth-child(3) {
+  background: #F2E9E9;
+  background-position-x: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.container .section:nth-child(4) {
+  background: #F2D98D;
+  background-position-x: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+@media (min-width: 600px) {
+  .container .section .init .cloud h2 {
+    font-size: 8vw;
+    letter-spacing: 0.05em;
+  }
+  .container .section .init .cloud h2 span {
+    font-size: 0.31em;
+    margin-top: -20px !important;
+  }
+  .container .section .content {
+    width: 600px;
+    margin: auto;
+  }
+}
+/*# sourceMappingURL=style.css.map */

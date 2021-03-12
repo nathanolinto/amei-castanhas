@@ -1,28 +1,21 @@
-import axios  from 'axios'
 import Header from '../components/layout/header'
-import Heading from '../components/layout/heading'
-import Grid from '../components/layout/grid'
+import Conteudo from '../components/layout/conteudo'
 
-function Index(props){
-    const itens = props.data
+function Index(){
+    //const itens = props.data
     return(
-        <div className="container">
+        <>
             <Header />
-            <Heading />
-            <Grid itens={itens} />
-            <script type="text/javascript" src="/initLayout.js"></script>
-        </div>
+            <div className="container">
+                <Conteudo />
+                <script src="/scroll.js"></script>
+                <script src="/anime.min.js"></script>
+                <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+                <script type="module" src="/App.js"></script>
+                <script type="module" src="/init.js"></script>
+            </div>
+        </>
     )
-}
-
-export async function getStaticProps() {
-    const accessToken = "IGQVJWVnFQdkdVZADVxeXBNLXBrRG5jaXFfTnYtWUt6MXk3akxhc2FMT1doazEzc004UmFwOFZARY1NQZAHZA0V2dNcUFJdFNRUzViQ21VMzlwajBFS3FXUVhNRlAxdHJuMnNUSUxCOWlkWGRwVF9lVUFBbAZDZD"
-    const urlInsta = `https://graph.instagram.com/me/media?fields=caption,media_url,media_type,permalink,timestamp,username&access_token=${accessToken}`
-    //https://graph.instagram.com/me/media?fields=caption,media_url,media_type,permalink,timestamp,username&access_token=IGQVJWVnFQdkdVZADVxeXBNLXBrRG5jaXFfTnYtWUt6MXk3akxhc2FMT1doazEzc004UmFwOFZARY1NQZAHZA0V2dNcUFJdFNRUzViQ21VMzlwajBFS3FXUVhNRlAxdHJuMnNUSUxCOWlkWGRwVF9lVUFBbAZDZD
-
-    const res = await axios.get(urlInsta);
-    const { data } = await res;
-    return { props: data }
 }
 
 export default Index;
