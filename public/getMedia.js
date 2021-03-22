@@ -21,14 +21,14 @@ const getMedia = {
     },
     contarTempo (tempoLimite = 10) {
         //console.log('getMedia -> contarTempo')
-        const tempo = window.localStorage.getItem('ameiTempo')
+        const tempo = new Date(window.localStorage.getItem('ameiTempo'))
         const atual = new (Date);
         var diferenca = atual - tempo
         var _segundo = 1000;
         var _minuto = _segundo * 60;
         var _hora = _minuto * 60;
         var _dia = _hora * 24;
-        //var dias = Math.floor(diferenca / _dia);
+        var dias = Math.floor(diferenca / _dia);
         var horas = Math.floor((diferenca % _dia) / _hora);
         //var minutos = Math.floor((diferenca % _hora) / _minuto);
         //var segundos = Math.floor((diferenca % _minuto) / _segundo);
