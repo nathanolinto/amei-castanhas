@@ -1,5 +1,5 @@
 const getMedia = {
-    url: 'https://graph.instagram.com/me/media?fields=caption,media_url,media_type,permalink,timestamp,username&access_token=IGQVJWVnFQdkdVZADVxeXBNLXBrRG5jaXFfTnYtWUt6MXk3akxhc2FMT1doazEzc004UmFwOFZARY1NQZAHZA0V2dNcUFJdFNRUzViQ21VMzlwajBFS3FXUVhNRlAxdHJuMnNUSUxCOWlkWGRwVF9lVUFBbAZDZD',
+    url: 'https://graph.instagram.com/me/media?fields=caption,media_url,media_type,permalink,timestamp,username&access_token=IGQVJXeGZAFbEx0bmYzYXM3bXZAMMHd3dVc4by1mNEwwVndNUWhpcGxZARWlHeHBKRlIycEtZAM05jSVZADZAllQcUJGVEVfR2VidWJKeHhyLXhJTm5aR0hZAUDdQTWEwQ2N5dFhkTWJkQkFQNWx1eUgzb2xEWAZDZD',
     async init () {
         //console.log('getMedia -> Init')
         return await this.getImages()
